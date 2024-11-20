@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden;
+    background: #f5f5f5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.logo-section {
+    background: white;
+    padding: 40px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.logo-container {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    perspective: 1000;
+    -webkit-perspective: 1000;
+}
+
+.logo-wrapper {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transition: transform 0.1s linear;
+    -webkit-transition: transform 0.1s linear;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+    margin: 0 40px;
+    flex-shrink: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.description {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    color: #666;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .logo-container {
+        -webkit-overflow-scrolling: touch;
+    }
+}
